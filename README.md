@@ -17,8 +17,21 @@ Este microservicio se encarga de gestionar cuentas y sus movimientos asociados. 
 git clone https://github.com/jerry-rodrigo/cuentaMovimientosDevsu.git
 cd cuentaMovimientos
 
-#mvn clean package
-#docker build
-#docker build -t cuenta-moviemiento:1.0 .
+#mvn clean package -DskipTests
+#docker build -t cuenta-movimiento:1.0 .
+#docker images
+#podman run -d --name db -e MYSQL_ROOT_PASSWORD=MPeru123@ -e MYSQL_DATABASE=cuenta_movimiento_db -p 3306:3306 mysql:8
+#docker run -p 8081:8081 6cc34a8ecc70
+
+#PARA VER LOS CONTEINER:
+#podman ps
+#PARA DETERNLO
+#podman stock 8034122361ed
+
+#MYSQL
+#url: jdbc:mysql://host.docker.internal:3306/cliente_persona_db
+#podman run -d --name db -e MYSQL_ROOT_PASSWORD=MPeru123@ -e MYSQL_DATABASE=cliente_persona_db -p 3306:3306 mysql:8
+
+#docker build -t cuenta-movimiento:1.0 .
 #docker-compose up
 #docker images
